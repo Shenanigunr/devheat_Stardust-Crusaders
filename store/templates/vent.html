@@ -1,0 +1,74 @@
+<html>
+<body>
+  <style>
+  input[type=text], select{
+  font-family:sans-serif;
+  font-size: medium;
+  text-align: center;
+  padding: 12px 20px;
+  margin:auto;
+  display:inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 270%;
+  height: 300%;}
+button[type=submit] {
+  width: 70%;
+  background-color: #0f0825;
+  box-align:Center;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px ;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+button[type=submit]:hover {
+  background-color: #050505;
+  box-align:Center;
+  text-align: center;
+}
+button[type=submit] {
+  width: 40%;
+  background-color: #0f0825;
+  box-align:Center;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px ;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button[type=submit]:hover {
+  background-color: #050505;
+  box-align:Center;
+  text-align: center;
+}
+
+    </style>
+    <body>
+      <div style="position:absolute;top:20px">
+        <form action="/signup">
+          {% csrf_token %}
+          <button type="submit">Register</button>
+          <button type="submit">SignIn</button>
+        </form>
+  </div>
+      <div style="position:absolute; left:600px; top:300px">
+        <form method="post" action="/vent/">
+          {% csrf_token %}
+          <input type="text" id="fname" name="problem" placeholder="Entre your Problem" style="align:center">
+          <button type="submit" id="btn">VENT</button>
+        </form>
+      </div>
+
+      </body>
+<p style = "font-family: Arial monospaced for SAP; position:absolute; left: 700px; top: 500px; font-size: 80px">
+DOWN THE VENT.
+</p>
+</body>
+</html>
