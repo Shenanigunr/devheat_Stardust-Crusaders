@@ -1,5 +1,6 @@
 # devheat_Stardust-Crusaders
 This is the project from Stardust Crusaders for Devheat 2022, organized by Indian Institute of Information Technology Surat.
+
 INSTRUCTIONS TO ACCESS SIGN IN/SIGN UP FOR WEBSITE:
 open powershell terminal in the given directory
 -pip install pipenv
