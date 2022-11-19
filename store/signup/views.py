@@ -18,11 +18,14 @@ def signup(request):
 
 
 def vent(request):
-    if request.method == "POST":
-        problem = request.POST.get('problem')
-        common = Vent(problem = problem)
-        common.save()
-    return render(request, 'vent.html')
+    try:
+        if request.method == "POST":
+            problem = request.POST.get('problem')
+            common = Vent(problem = problem)
+            common.save()
+        return render(request, 'vent.html')
+    except:
+        return render(request, 'vent.html')
 def signin(request):
     return render(request, 'signin.html')
 
