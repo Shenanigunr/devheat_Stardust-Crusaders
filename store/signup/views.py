@@ -5,13 +5,17 @@ from signup.models import Signup,Vent
 def index(request):
     return render(request, 'vent.html')
 def signup(request):
-    if request.method == "POST":
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        id = Signup(username = username, password = password)
-        id.save()
+    try:
+        if request.method == "POST":
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            id = Signup(username = username, password = password)
+            id.save()
 
-    return render(request, 'signup.html')
+        return render(request, 'signup.html')
+    except:
+        return render(request, 'signup.html')
+
 
 def vent(request):
     if request.method == "POST":
